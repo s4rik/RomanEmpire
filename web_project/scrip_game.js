@@ -227,7 +227,9 @@ carte.addEventListener('click', (event) => {
 });
 
 //Ci-dessous les variables des batiments
-
+const text_ordo = document.getElementById("ordo_valeur") ; 
+var ordo = 80 ; 
+text_ordo.textContent = ordo ; 
 const ruralBuildingsType = [
     {
         name: 'farm',

@@ -259,14 +259,14 @@ td, th {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
 }
 
-#denarri {
+#denarri_image {
     width: 80px;
     height: 80px;
     position: absolute;
     top: 150px;
     z-index: 1;
 }
-#denarri_cadre {
+#text_denarri {
     position: absolute;
     top: 160px;
     left: 130px;
@@ -274,7 +274,7 @@ td, th {
     font-weight: bold;
 }
 
-#lignum {
+#lignum_image {
     width: 70px;
     height: 70px;
     position: absolute;
@@ -282,7 +282,7 @@ td, th {
     left: 17px;
     z-index: 1;
 }
-#lignum_cadre {
+#text_lignum {
     position: absolute;
     top: 240px;
     left: 130px;
@@ -290,14 +290,14 @@ td, th {
     font-weight: bold;
 }
 
-#ferrum {
+#ferrum_image {
     width: 80px;
     height: 65px;
     position: absolute;
     top: 310px;
     z-index: 1;
 }
-#ferrum_cadre {
+#text_ferrum {
     position: absolute;
     top: 320px;
     left: 130px;
@@ -305,7 +305,7 @@ td, th {
     font-weight: bold;
 }
 
-#petra {
+#petra_image {
     width: 70px;
     height: 65px;
     position: absolute;
@@ -313,7 +313,7 @@ td, th {
     left: 17px;
     z-index: 1;
 }
-#petra_cadre {
+#text_petra {
     position: absolute;
     top: 400px;
     left: 130px;
@@ -321,7 +321,7 @@ td, th {
     font-weight: bold;
 }
 
-#victualia {
+#victualia_image {
     width: 75px;
     height: 75px;
     position: absolute;
@@ -329,7 +329,7 @@ td, th {
     left: 17px;
     z-index: 1;
 }
-#victualia_cadre {
+#text_victualia {
     position: absolute;
     top: 475px;
     left: 130px;

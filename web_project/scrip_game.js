@@ -311,7 +311,41 @@ const urbainBuildingsType = [
         condition: 'none',//ordo > 50
     }
 ]
+//ici les constance de ressource globales 
+const text_ordo = document.getElementById("text_ordo") ; 
+var ordo = 80 ;
+text_ordo.textContent = ordo ; 
 
+// ici on déclare les ressources globales qui changent à chaque tour
+const text_denarii = document.getElementById("text_denarii") ; 
+var denarii = 2000 ;
+text_denarii.textContent = denarii ;  
+
+const text_victualia = document.getElementById("text_victualia") ; 
+var victualia = 500 ;
+text_victualia.textContent = victualia  ; 
+
+const text_lignum = document.getElementById("text_lignum") ; 
+var lignum = 20 ; 
+text_lignum.textContent = lignum ; 
+
+const text_ferrum = document.getElementById("text_ferrum") ; 
+var ferrum = 20 ; 
+text_ferrum.textContent = ferrum; 
+
+const text_petra = document.getElementById("text_petra") ; 
+var petra = 20 ; 
+text_petra.textContent = petra; 
+
+
+const tour = document.getElementById("next_tour") ; 
+tour.addEventListener("click", function tour_suivant(){
+denarii += 500 ; 
+victualia -= 20 ; 
+text_denarii.textContent = denarii ; //pour update denarii à chaque fois que l'on appuis sur tour suivant
+text_victualia.textContent = victualia ; 
+}
+)
 //Ci-dessous les variables des troupes
 
 const troupes = [

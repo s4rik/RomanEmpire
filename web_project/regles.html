@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules wargame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="fond_rules">
+
+    <a href="index.html" onclick="window.history.back();">
+        <img id="retour" src="fleche_back.png" alt="Retour">
+    </a>
+
+    <h1 id="tete_rules">Inscris ton nom dans l'histoire</h1>
+
+    <h2>Vous êtes à l'apogée de l'empire romain</h2>
+    <p>Il ne vous reste plus qu'à envahir la Gaule pour asseoir votre domination sur le monde. <br><br>
+        Mais la résistance de l'adversaire est rude, il va falloir que l'on vous aide pour remporter la guerre.
+    </p>
+
+    <h2>Principe du jeu :</h2>
+    <p>
+        Vous jouez contre l'ordinateur, vous commencez la guerre avec une capitale. <br>
+        Prenez bien garde à ne pas la perdre car cela serait synonyme de défaite. <br>
+        Vous l'avez compris,
+        le but est de conquérir la carte pour ensuite assiéger la capitale de l'ennemi.
+    </p>
+
+    <h2>Fonctionnement du jeu :</h2>
+    <p>
+        Bienvenue dans notre wargame mode romaine ! <br>
+        C'est un jeu en tour par tour, faites avancez vos troupes en cliquant sur les <br>
+        centres des zones. En réalisant cette action, des descriptions de régions <br>
+        et de vos armées et unités vous seront données. <br>
+        Vous pourrez par exemple choisir de construire des batiments. <br>
+        Ou encore d'attaquer l'ennemmi. <br><br>
+
+        Les ressources globales sont visibles à gauche de l'écran,<br>
+        ces memes ressources changent forcément à chaque fin de tour <br>
+        en fonction des actions que vous réalisez à chaque tour. <br><br>
+
+        Validez votre tour quand vous estimez avoir réalisé toutes vos actions <br>
+        et remportez la guerre !
+    </p>
+
+    <h2>Détails du jeu :</h2>
+
+    <h3>La carte du jeu :</h3>
+    <p>
+        La carte du jeu est découpée en 17 zones en oubliant "Britannia". <br>
+        Chacune des 17 zones est soit une zone rurale, soit une zone de construction de villes. <br>
+        Dans les zones rurales, vous pourrez construire des batiments de productions qui vous rapporteront des ressources globales.<br>
+        Dans les zones dites urbaines, vous pourrez construire des batiments qui vous rapporteront des ressources locales. <br>
+        Ces ressources sont essentielles pour gagner la guerre, alors ne négligez pas la construction de batiments. <br>
+        Attention ! Une seule construction par zone, alors choisissez bien !
+    </p>
+
+    <h3>Les constructions :</h3>
+    <p>
+        Voici le tableau des constructions disponibles en ville. <br>
+    </p>
+    <table>
+        <thead>
+            <th>Nom</th>
+            <th>Cout</th>
+            <th>Production</th>
+            <th>Condition</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Forum</td>
+                <td>20 petra, 500 denarri</td>
+                <td>+ 100 denarri par manupretium</td>
+                <td>ordo >= 70 Un seul de ce type</td>
+            </tr>
+
+            <tr>
+                <td>Bains</td>
+                <td>10 petra, 500 denarri</td>
+                <td>+ 10 ordo</td>
+                <td>Un seul de ce type</td>
+            </tr>
+
+            <tr>
+                <td>Aqueduc</td>
+                <td>30 petra, 1500 denarri</td>
+                <td>+ 20 ordo</td>
+                <td>Un seul de ce type</td>
+            </tr>
+
+            <tr>
+                <td>Amphithéâtre</td>
+                <td>20 petra, 1000 denarri</td>
+                <td>+ 20 ordo</td>
+                <td>Un seul de ce type</td>
+            </tr>
+
+            <tr>
+                <td>Temple</td>
+                <td>20 petra, 1000 denarri</td>
+                <td>+ 10 ordo</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Caserne</td>
+                <td>10 lignum, 5 petra, 1000 denarii</td>
+                <td>Une unité d'infanterie possible par tour</td>
+                <td>ordo > 50</td>
+            </tr>
+
+            <tr>
+                <td>Ecurie</td>
+                <td>20 lignum, 5 petra, 1000 denarri</td>
+                <td>Une unité de cavalerie possible par tour</td>
+                <td>ordo > 50</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <p>
+        Voici le tableau des constructions disponibles en zones rurales. <br>
+    </p>
+
+    <table>
+        <thead>
+            <th>Nom</th>
+            <th>Cout</th>
+            <th>Production</th>
+            <th>Condition</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ferme</td>
+                <td>10 lignum, 1 ferrum, 1 petra, 100 denarri</td>
+                <td>+ 100 victualia</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Pêcherie</td>
+                <td>5 lignum, 50 denarri</td>
+                <td>+ 50 victualia</td>
+                <td>Présence d'une mer</td>
+            </tr>
+
+            <tr>
+                <td>Camp de bûcherons</td>
+                <td>200 denarri</td>
+                <td>+ 10 lignum</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Mine de fer</td>
+                <td>10 lignum, 500 denarri</td>
+                <td>+ 10 ferrum</td>
+                <td>Présence d'un gisement</td>
+            </tr>
+
+            <tr>
+                <td>Mine d'or</td>
+                <td>10 lignum, 2 ferrum, 500 denarri</td>
+                <td>+ 1000 denarri</td>
+                <td>Présence d'un gisement rare</td>
+            </tr>
+
+            <tr>
+                <td>Carrière</td>
+                <td>10 lignum, 2 ferrum, 500 denarri</td>
+                <td>+10 petra</td>
+                <td>Présence d'un gisement</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Il n'y a aucune construction de départ.
+    </p>
+
+    <h3>Les ressources globales :</h3>
+    <p>
+        denarri : la monnaie du jeu.<br><br>
+        victualia : les victuailles, la nourriture.<br><br>
+        lignum : le bois.<br><br>
+        ferrum : le fer.<br><br>
+        petra : la pierre.
+    </p>
+
+    <h3>Les ressources locales :</h3>
+    <p>
+        ordo : l'ordre public ou le moral de la population. <br>
+        Il s'agit d'un pourcentage qui diminue en fonction du manupretium et <br>
+        en fonction du fait que la dite ville soit conquise. <br>
+        En revanche, l'ordo remonte si on construit des batiments. <br><br>
+        manupretium : main d'oeuvre, utile pour lever des troupes et des impôts.
+    </p>
+
+    <h3>Les ressources en début de partie :</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>denarii</td>
+                <td>2000</td>
+            </tr>
+
+            <tr>
+                <td>victualia</td>
+                <td>500</td>
+            </tr>
+
+            <tr>
+                <td>lignum</td>
+                <td>20</td>
+            </tr>
+
+            <tr>
+                <td>ferrum</td>
+                <td>20</td>
+            </tr>
+
+            <tr>
+                <td>petra</td>
+                <td>20</td>
+            </tr>
+
+            <tr>
+                <td>manupretium</td>
+                <td>2 par ville</td>
+            </tr>
+
+            <tr>
+                <td>ordo</td>
+                <td>80 par ville</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Croissance de la population dans les villes :</h3>
+    <p>
+        C'est simple, pour que la population d'une ville augmente de 1 (manupretium), <br>
+        il faut avoir assez d'ordo et attendre plusieurs tours. <br>
+        N'oubliez pas que les batiments des villes peuvent faire remonter l'ordo de votre ville. <br>
+        <br>
+        Faites accroitre votre population pour ensuite lever des armées !
+    </p>
+
+    <h3>Les troupes :</h3>
+    <p>
+        Unité : troupe indivisible du meme type et d'à peu près 1000 hommes. <br>
+        Armée : ensemble d'unités (maximum 6 unités) agissant ensemble.
+    </p>
+
+    <table>
+        <thead>
+            <th>Nom</th>
+            <th>image</th>
+            <th>Cout</th>
+            <th>Condition</th>
+            <th>Entretien</th>
+            <th>Statistiques</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hastati (infanterie légère)</td>
+                <td><img src="infanterie_legere.png" alt="infanterie legere romaine"></td>
+                <td>1 manupretium, 2 ferrum</td>
+                <td>Caserne</td>
+                <td>50 victualia, 100 denarri</td>
+                <td>santé : 10 <br> moral : 5 <br> puissance : 4 <br> résistance : 0 <br> vitesse : normale</td>
+            </tr>
+
+            <tr>
+                <td>Légionnaires (infanterie loudre)</td>
+                <td><img src="infanterie_lourde.png" alt="infanterie lourde romaine"></td>
+                <td>1 manupretium, 10 ferrum</td>
+                <td>Caserne</td>
+                <td>60 victualia, 120 denarri</td>
+                <td>santé : 10 <br> moral : 10 <br> puissance : 4 <br> résistance : 2 <br> vitesse : normale</td>
+            </tr>
+
+            <tr>
+                <td>Auxiliaires de cavalerie (cavalerie légère)</td>
+                <td>1 manupretium, 4 ferrum</td>
+                <td>Ecuries</td>
+                <td>60 victualia, 120 denarri</td>
+                <td>santé : 15 <br> moral : 5 <br> puissance : 3 <br> résistance : 0 <br> vitesse : rapide</td>
+            </tr>
+
+            <tr>
+                <td>Equites(cavalerie lourde)</td>
+                <td>1 manupretium, 14 ferrum</td>
+                <td>Ecuries</td>
+                <td>80 victualia, 160 denarri</td>
+                <td>santé : 15 <br> moral : 10 <br> puissance : 5 <br> résistance : 1 <br> vitesse : rapide</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Il n'y a aucune unité de départ. <br>
+        Sans entretien, une unité perd 1 de moral et 1 de santé par tour ! A 0 de moral, <br>
+        l'unité perd 1 de santé par tour supplémentaire, 0 de santé = unité détruite. <br>
+        <br>
+        Il est donc important de faire revenir ses troupes de temps en temps pour qu'elles soient ravitaillées, <br>
+        et que vos troupes regagnent 1 de santé et 1 de moral par tour. <br>
+        <br>
+        S'il n'y a pas assez de ravitaillement pour toutes les unités mais qu'il peut partiellement couvrir
+        les besoins d'entretien, <br>
+        il est distribué aléatoirement chaque tour <br>
+        (les premières unités servies le
+        sont totalement, les autres sont privées de ravitaillement).
+    </p>
+
+    <h3>Détails des statistiques :</h3>
+    <p>
+        Santé : plus importante pour la cavalerie. <br>
+        Moral : peu importe le type d'unité, le moral varie entre 5 et 10. <br>
+        Puissance : peu importe le type d'unité, la puissance varie entre 3 et 5. <br>
+        Résistance : peu importe le type d'unité, la résistance varie entre 0 et 2. <br>
+        Vitesse : rapide pour la cavalerie, normale pour l'infanterie.
+    </p>
+
+    <h3>Les déplacements :</h3>
+    <p>
+        Vos troupes et armées ne peuvent se déplacer que dans des zones dites adjacentes.
+        <br>En cas de mauvaise séléction de région de déplacement, un message vous avertira <br>
+        en vous disant que le déplacement est alors impossible.
+    </p>
+
+    <h3>Les règles de combat :</h3>
+</body>
+</html>

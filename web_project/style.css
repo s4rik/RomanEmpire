@@ -490,15 +490,6 @@ td, th {
     background-color: rgb(25, 126, 37);
 }
 
-#combat1, #combat2, #combat3, #combat4, #combat5, #combat6, #combat7, #combat8, #combat9, #combat10, #combat11, #combat12, #combat13, #combat14, #combat15, #combat16, #combat17 {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    z-index: 1;
-    top: 150px;
-    right: 22px;
-}
-
 #cadre_tuto {
     border: solid 5px rgb(220, 170, 20);
     border-radius: 50px;
@@ -580,3 +571,29 @@ td, th {
     background-color: rgb(100, 28, 28);
     border-radius: 50%;;
 }
+
+#attaque17, #attaque16, #attaque15, #attaque14, #attaque13, 
+#attaque12, #attaque11, #attaque10, #attaque9, #attaque8,
+#attaque7, #attaque6, #attaque5, #attaque4, #attaque3, #attaque2, #attaque1 {
+    border: solid 3px rgb(240, 207, 22);
+    position: fixed;
+    width: 310px;
+    height: 60px;
+    background-color: rgb(168, 64, 64);
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    top: 200px;
+    right: 90px; 
+    line-height: 60px;
+    font-family: "Praetoria", sans-serif;
+    font-size: 30px;
+}
+
+#attaque17:hover, #attaque16:hover, #attaque15:hover, #attaque14:hover, #attaque13:hover,
+#attaque12:hover, #attaque11:hover, #attaque10:hover, #attaque9:hover, #attaque8:hover, 
+#attaque7:hover, #attaque6:hover, #attaque5:hover, #attaque4:hover, #attaque3:hover,
+#attaque2:hover, #attaque1:hover {
+    background-color:rgb(129, 49, 49);
+}
+

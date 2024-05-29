@@ -225,11 +225,61 @@ carte.addEventListener('click', (event) => {
 }
   }
 });
-
-//Ci-dessous les variables des batiments
+// ici les variables globales 
+// ici on déclare les ressources globales qui changent à chaque tour
 const text_ordo = document.getElementById("ordo_valeur") ; 
 var ordo = 80 ; 
 text_ordo.textContent = ordo ; 
+
+const text_manupetrium = document.getElementById("manupetrium_valeur") ; 
+var manupetrium = 2 ; 
+
+//constante globale
+const text_denarri = document.getElementById("text_denarri") ; 
+var denarri = 2000 ;
+text_denarri.textContent = denarri ;  
+
+const text_victualia = document.getElementById("text_victualia") ; 
+var victualia = 500 ;
+text_victualia.textContent = victualia  ; 
+
+const text_lignum = document.getElementById("text_lignum") ; 
+var lignum = 20 ; 
+text_lignum.textContent = lignum ; 
+
+const text_ferrum = document.getElementById("text_ferrum") ; 
+var ferrum = 20 ; 
+text_ferrum.textContent = ferrum; 
+
+const text_petra = document.getElementById("text_petra") ; 
+var petra = 20 ; 
+text_petra.textContent = petra; 
+
+function population(ordo){
+    nb_tour=(100-ordo) /5
+}
+
+
+const tour = document.getElementById("next_tour") ; 
+for (i=0; i<=population(ordo);i++){
+tour.addEventListener("click", function tour_suivant(){
+denarri +=  1  ; 
+text_denarri.textContent = denarri ; //pour update denarii à chaque fois que l'on appuis sur tour suivant
+if (i == population(ordo)){
+    manupetrium += 1 ; 
+    text_manupetrium.textContent = manupetrium ; 
+}
+}
+)
+}
+
+
+
+
+
+
+//Ci-dessous les variables des batiments
+
 const ruralBuildingsType = [
     {
         name: 'farm',
@@ -480,49 +530,3 @@ document.getElementById("constru_reg16").addEventListener("click", function() {
 
 });
 var domination_romaine = document.getElementById("symbole_romain");
-
-///Fonction attaque !
-function move_troupe() {
-    alert("Attaque!")
-}
-
-//Var attaque !
-var attaque17 = document.getElementById("attaque17")
-var attaque16 = document.getElementById("attaque16")
-var attaque15 = document.getElementById("attaque15")
-var attaque14 = document.getElementById("attaque14")
-var attaque13 = document.getElementById("attaque13")
-var attaque12 = document.getElementById("attaque12")
-var attaque11 = document.getElementById("attaque11")
-var attaque10 = document.getElementById("attaque10")
-var attaque9 = document.getElementById("attaque9")
-var attaque8 = document.getElementById("attauque8")
-var attaque7 = document.getElementById("attaque7")
-var attaque6 = document.getElementById("attaque6")
-var attaque5 = document.getElementById("attaque5")
-var attaque4 = document.getElementById("attaque4")
-var attaque3 = document.getElementById("attaque3")
-var attaque2 = document.getElementById("attaque2")
-var attaque1 = document.getElementById("attaque1")
-
-//Evenement bouton ! 
-
-attaque17.addEventListener("click", move_troupe)
-attaque16.addEventListener("click", move_troupe)
-attaque15.addEventListener("click", move_troupe)
-attaque14.addEventListener("click", move_troupe)
-attaque13.addEventListener("click", move_troupe)
-attaque12.addEventListener("click", move_troupe)
-attaque11.addEventListener("click", move_troupe)
-attaque10.addEventListener("click", move_troupe)
-attaque9.addEventListener("click", move_troupe)
-attaque8.addEventListener("click", move_troupe)
-attaque7.addEventListener("click", move_troupe)
-attaque6.addEventListener("click", move_troupe)
-attaque5.addEventListener("click", move_troupe)
-attaque4.addEventListener("click", move_troupe)
-attaque3.addEventListener("click", move_troupe)
-attaque2.addEventListener("click", move_troupe)
-attaque1.addEventListener("click", move_troupe)
-
-
